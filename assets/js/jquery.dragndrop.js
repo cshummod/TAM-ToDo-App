@@ -24,7 +24,7 @@
     };
 
     var stylesLoaded = false;
-    var stylesDefaults = $('<style type="text/css">.jqdndLoaded > * { cursor: move; user-select: none; } .jqdndLoaded .jqdndDragging { opacity: 0.5; }</style>');
+    var stylesDefaults = $('<style type="text/css">.jqdndLoaded > * { user-select: none; } .jqdndLoaded .jqdndDragging { opacity: 0.5; }</style>');
 
     /* Add Plugin to jQuery */
     $.fn.dragndrop = function( options ) {

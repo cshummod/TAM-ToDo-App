@@ -1,3 +1,10 @@
+$tam-primary: #4a90e2;
+$tam-secondary: #e0e0e0;
+$tam-success: #00e352;
+$tam-default: #273648;
+$tam-light: #f9f9f9;
+$tam-dark: #535353;
+
 @font-face {
   font-family: Dubai-Regular;
   src: url("../fonts/DubaiW23-Regular.woff") format("woff");
@@ -8,8 +15,81 @@
   src: url("../fonts/DubaiW23-Medium.woff") format("woff");
   src: url("../fonts/DubaiW23-Medium.ttf") format("ttf");
 }
+* {
+  font-family: Dubai-Regular !important;
+  font-size: 18px !important;
+}
+.filter-white {
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(102deg)
+    brightness(105%) contrast(101%);
+}
+.navbar-nav {
+  li {
+    > a {
+      &:hover {
+        color: white;
+        background-color: $tam-primary;
+        img {
+          filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(102deg)
+            brightness(105%) contrast(101%);
+        }
+      }
+    }
+  }
+  > .active {
+    > a {
+      color: white;
+      background-color: $tam-primary;
+      img {
+        filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(102deg)
+          brightness(105%) contrast(101%);
+      }
+    }
+  }
+}
 
-*{
-  font-family: Dubai-Regular!important;
-  font-size: 18px!important;
+label {
+  color: #666666;
+  user-select: none;
+}
+.rounded-box {
+  color: $tam-dark;
+  background-color: $tam-secondary;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  width: auto;
+}
+
+#wrapper {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+}
+
+#sidebar {
+  min-width: 250px;
+  max-width: 250px;
+  background: $tam-default;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+#sidebar.active {
+  margin-right: -250px;
+}
+
+#content {
+  width: 100%;
+  padding: 20px;
+  min-height: 100vh;
+  transition: all 0.3s;
+}
+
+@media (max-width: 768px) {
+  #sidebar {
+    margin-right: -250px;
+    .active {
+      margin-right: 0;
+    }
+  }
 }

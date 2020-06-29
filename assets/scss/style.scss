@@ -1,6 +1,5 @@
 $tam-primary: #4a90e2;
 $tam-secondary: #e0e0e0;
-$tam-success: #00e352;
 $tam-default: #273648;
 $tam-light: #f9f9f9;
 $tam-dark: #535353;
@@ -19,6 +18,7 @@ $tam-dark: #535353;
   font-family: Dubai-Regular !important;
   font-size: 18px !important;
 }
+
 .filter-white {
   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(102deg)
     brightness(105%) contrast(101%);

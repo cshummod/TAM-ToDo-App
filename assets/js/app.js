@@ -1,9 +1,13 @@
 $(document).ready(function () {
+  // Sidebar
+  // hide expand sidebar button on load
   $("#expandSidebarBtn").hide();
+
   $("#collapseSidebarBtn").on("click", function () {
     $("#sidebar").toggleClass("active");
     $("#expandSidebarBtn").show();
   });
+
   $("#expandSidebarBtn").click(function () {
     $("#sidebar").toggleClass("active");
     $(this).hide();
@@ -14,10 +18,11 @@ $(document).ready(function () {
       $("#expandSidebarBtn").show();
     }
   });
-
+  // Drag and drop
   // Initiate Jquery dragndrop plugin
   $(".dragndrop").dragndrop();
 
+  // Tasks Checkboxes
   if ($("#dTask1:checked")) {
     $("#dTask1").next().css({
       "text-decoration": "line-through",

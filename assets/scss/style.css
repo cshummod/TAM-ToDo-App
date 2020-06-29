@@ -11,6 +11,7 @@
 }
 
 * {
-  font-family: Dubai-Regular;
+  font-family: Dubai-Regular !important;
+  font-size: 18px !important;
 }
 /*# sourceMappingURL=style.css.map */

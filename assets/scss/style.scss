@@ -1,4 +1,6 @@
+@import "../bootstrap/scss/functions";
 @import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
 
 $theme-colors: (
   "primary": #4a90e2,
@@ -134,7 +136,9 @@ hr {
   #sidebar.active {
     margin-right: 0;
   }
+}
 
+@media (max-width: 576px) {
   .form-inline {
     margin-top: 0.5rem;
     .form-group {
@@ -148,7 +152,7 @@ hr {
     display: inline;
     vertical-align: middle;
     position: relative;
-    margin-right: 1rem;
+    margin-right: 1.5rem;
     &::before {
       content: url(../images/icon-uncheck.svg);
       display: inline;
@@ -160,6 +164,7 @@ hr {
       display: inline;
       position: absolute;
       right: 0;
+      top: 0;
       margin-right: -2.5rem;
     }
   }

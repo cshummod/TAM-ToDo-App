@@ -153,6 +153,7 @@ hr {
     vertical-align: middle;
     position: relative;
     margin-right: 1.5rem;
+
     &::before {
       content: url(../images/icon-uncheck.svg);
       display: inline;

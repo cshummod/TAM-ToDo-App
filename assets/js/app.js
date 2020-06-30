@@ -10,7 +10,7 @@ $(document).ready(function () {
 
   $("#expandSidebarBtn").click(function () {
     $("#sidebar").toggleClass("active");
-    $("#expandSidebarBtn").hide();
+    $(this).hide();
   });
 
   $(window).on("resize", function () {
@@ -23,11 +23,11 @@ $(document).ready(function () {
   // Initiate Jquery dragndrop plugin
   $(".dragndrop").dragndrop();
 
-  // Tasks Checkboxes
+  // Tasks checkboxes
   if ($("#dTask1:checked")) {
     $("#dTask1").next().css({
       "text-decoration": "line-through",
-      opacity: ".5",
+      color: "rgba(102, 102, 102, 0.5)",
     });
   }
 
@@ -36,11 +36,11 @@ $(document).ready(function () {
     this.checked
       ? label.css({
           "text-decoration": "line-through",
-          opacity: ".5",
+          color: "rgba(102, 102, 102, 0.5)",
         })
       : label.css({
           "text-decoration": "none",
-          opacity: "1",
+          color: "rgba(102, 102, 102, 1)",
         });
   });
 });

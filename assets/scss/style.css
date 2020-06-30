@@ -10846,6 +10846,31 @@ label {
   font-size: 18px;
 }
 
+input[type="text"] {
+  font-family: Dubai-Regular, Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+
+input[type="text"]::-webkit-input-placeholder {
+  color: #b5b5b5;
+}
+
+input[type="text"]:-ms-input-placeholder {
+  color: #b5b5b5;
+}
+
+input[type="text"]::-ms-input-placeholder {
+  color: #b5b5b5;
+}
+
+input[type="text"]::placeholder {
+  color: #b5b5b5;
+}
+
+input[type="text"]::-ms-input-placeholder {
+  color: #b5b5b5;
+}
+
 h4 {
   font-family: Dubai-Medium, Arial, Helvetica, sans-serif;
   font-size: 14px;
@@ -10969,5 +10994,16 @@ label {
 
 .checkbox input[type="checkbox"]:checked + label::after {
   content: url(../images/icon-check.svg);
+}
+
+select {
+  background-image: url(../images/icon-arrow-down-small-dark.svg);
+  background-position: left 10px center;
+  background-repeat: no-repeat;
+  font-family: Dubai-Regular, Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 /*# sourceMappingURL=style.css.map */

@@ -34,6 +34,16 @@ label {
   font-family: Dubai-Regular, Arial, Helvetica, sans-serif;
   font-size: 18px;
 }
+input[type="text"] {
+  font-family: Dubai-Regular, Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  &::placeholder {
+    color: #b5b5b5;
+  }
+  &::-ms-input-placeholder {
+    color: #b5b5b5;
+  }
+}
 
 h4 {
   font-family: Dubai-Medium, Arial, Helvetica, sans-serif;
@@ -155,4 +165,15 @@ label {
       }
     }
   }
+}
+
+select {
+  background-image: url(../images/icon-arrow-down-small-dark.svg);
+  background-position: left 10px center;
+  background-repeat: no-repeat;
+  font-family: Dubai-Regular, Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }

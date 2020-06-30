@@ -1,231 +1,302 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="./assets/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <!-- TODO: Use SVG instead -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/awesome-bootstrap-checkbox.css" />
+    <link rel="stylesheet" href="./assets/scss/style.css" />
+    <title>My ToDo App</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./assets/bootstrap/dist/css/bootstrap.min.css" />
-  <!-- TODO: Use SVG instead -->
-  <link rel="stylesheet" type="text/css"
-    href="https://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="./assets/css/awesome-bootstrap-checkbox.css" />
-  <link rel="stylesheet" href="./assets/scss/style.css" />
-  <title>My ToDo App</title>
-</head>
-
-<body>
-  <div id="wrapper">
-    <!-- Sidebar -->
-    <nav id="sidebar" class="d-flex flex-column justify-content-between">
-      <div class="mt-2">
-        <div class="d-flex align-items-center justify-content-between p-2 mb-4">
-          <a class="navbar-brand" href="index.html">
-            <img src="./assets/images/logo.png" width="83" height="32" alt="logo" />
-          </a>
-          <button class="btn btn-transparent text-white" id="collapseSidebarBtn">&times;</button>
+  <body>
+    <div id="wrapper">
+      <!-- Sidebar -->
+      <nav id="sidebar" class="d-flex flex-column justify-content-between">
+        <div class="mt-2">
+          <div class="d-flex justify-content-between p-2 mb-4 h-25">
+            <a class="navbar-brand align-self-end" href="index.html">
+              <img
+                src="./assets/images/logo.png"
+                width="83"
+                height="32"
+                alt="logo"
+              />
+            </a>
+            <button
+              id="collapseSidebarBtn"
+              class="btn btn-transparent text-white pb-5"
+            >
+              <img
+                src="./assets/images/icon-close.svg"
+                width="9.3"
+                height="9.3"
+                class="filter-white"
+                alt="icon-close"
+              />
+            </button>
+          </div>
+          <ul class="navbar-nav px-0">
+            <li class="nav-item active text-right mb-2">
+              <a class="nav-link p-2" href="#">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="d-flex">
+                    <img
+                      src="./assets/images/icon-list.svg"
+                      alt="icon-list"
+                      class="filter-white ml-3"
+                    />
+                    <span>
+                      المهام
+                    </span>
+                  </div>
+                  <img
+                    src="./assets/images/icon-arrow-left.svg"
+                    alt="icon-arrow-left"
+                  />
+                </div>
+              </a>
+            </li>
+            <li class="nav-item text-right mb-2">
+              <a class="nav-link p-2" href="#">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="d-flex w-75 align-items-center">
+                    <img
+                      src="./assets/images/icon-user.svg"
+                      alt="icon-user"
+                      class="filter-white ml-3"
+                    />
+                    <span>الأعضاء</span>
+                  </div>
+                  <img
+                    src="./assets/images/icon-arrow-left.svg"
+                    alt="icon-arrow-left"
+                  />
+                </div>
+              </a>
+            </li>
+            <li class="nav-item text-right mb-2">
+              <a class="nav-link p-2" href="#">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="d-flex w-75 align-items-center">
+                    <img
+                      src="./assets/images/icon-creditcard.svg"
+                      alt="icon-creditcard"
+                      class="filter-white ml-3"
+                    />
+                    <span>الدفع والفواتير</span>
+                  </div>
+                  <img
+                    src="./assets/images/icon-arrow-left.svg"
+                    alt="icon-arrow-left"
+                  />
+                </div>
+              </a>
+            </li>
+            <li class="nav-item text-right mb-2">
+              <a class="nav-link p-2" href="#">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="d-flex w-75 align-items-center">
+                    <img
+                      src="./assets/images/icon-settings.svg"
+                      alt="icon-settings"
+                      class="filter-white ml-3"
+                    />
+                    <span>إعدادات</span>
+                  </div>
+                  <img
+                    src="./assets/images/icon-arrow-left.svg"
+                    alt="icon-arrow-left"
+                  />
+                </div>
+              </a>
+            </li>
+          </ul>
         </div>
-        <ul class="navbar-nav px-0">
-          <li class="nav-item active text-right mb-2">
-            <a class="nav-link p-2" href="#">
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="d-flex align-items-center">
-                  <img src="./assets/images/icon-list.svg" alt="icon-list" class="filter-white ml-3" />
-                  <h2 class="text-white">المهام</h2>
-                </div>
-                <img src="./assets/images/icon-arrow-left.svg" alt="icon-arrow-left" />
+        <div class="mb-3">
+          <hr style="background-color: #3d4a5a;" />
+          <div class="row align-items-center p-2">
+            <div class="col-md-10 d-flex">
+              <img
+                src="./assets/images/avatar.png"
+                alt="avatar"
+                class="img-fluid ml-2"
+              />
+              <div class="d-flex flex-column">
+                <h4>
+                  محمد عبدالله
+                </h4>
+                <h5>الشركة المحدودة</h5>
               </div>
-            </a>
-          </li>
-          <li class="nav-item text-right mb-2">
-            <a class="nav-link p-2" href="#">
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="d-flex w-75 align-items-center">
-                  <img src="./assets/images/icon-user.svg" alt="icon-user" class="filter-white ml-3" />
-                  <h2 class="text-white">الأعضاء</h2>
-                </div>
-                <img src="./assets/images/icon-arrow-left.svg" alt="icon-arrow-left" />
-              </div>
-            </a>
-          </li>
-          <li class="nav-item text-right mb-2">
-            <a class="nav-link p-2" href="#">
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="d-flex w-75 align-items-center">
-                  <img src="./assets/images/icon-creditcard.svg" alt="icon-creditcard" class="filter-white ml-3" />
-                  <h2 class="text-white">الدفع والفواتير</h2>
-                </div>
-                <img src="./assets/images/icon-arrow-left.svg" alt="icon-arrow-left" />
-              </div>
-            </a>
-          </li>
-          <li class="nav-item text-right mb-2">
-            <a class="nav-link p-2" href="#">
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="d-flex w-75 align-items-center">
-                  <img src="./assets/images/icon-settings.svg" alt="icon-settings" class="filter-white ml-3" />
-                  <h2 class="text-white">إعدادات</h2>
-                </div>
-                <img src="./assets/images/icon-arrow-left.svg" alt="icon-arrow-left" />
-              </div>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="mb-3">
-        <hr style="background-color: #3d4a5a;" />
-        <div class="row align-items-center p-2">
-          <div class="col-md-8 d-flex">
-            <img src="./assets/images/avatar.png" alt="avatar" class="img-fluid ml-2" />
-            <div class="d-flex flex-column">
-              <h2 class="text-white" style="font-size: 14px !important;">
-                محمد عبدالله
-              </h2>
-              <span class="text-secondary" style="font-size: 11px !important;">الشركة المحدودة</span>
+            </div>
+            <div class="col-md-2">
+              <img
+                src="./assets/images/icon-arrow-down-small.png"
+                alt="icon-arrow-down-small"
+              />
             </div>
           </div>
-          <div class="col-md-4">
-            <img src="./assets/images/icon-arrow-down-small.png" alt="icon-arrow-down-small" />
-          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
 
-    <!-- Page Content -->
-    <div id="content">
-      <div class="row bg-white shadow-sm justify-content-between py-3 mb-5">
-        <div>
-          <button type="button" id="expandSidebarBtn" class="btn btn-primary">
-            <img src="./assets/images/icon-arrow-left.svg" alt="icon-arrow-left" class="filter-white" />
-          </button>
-        </div>
+      <!-- Page Content -->
+      <div id="content">
+        <div class="row bg-white shadow-sm justify-content-between py-3 mb-5">
+          <div>
+            <button
+              type="button"
+              id="expandSidebarBtn"
+              class="btn btn-primary mr-3"
+            >
+              <img
+                src="./assets/images/icon-arrow-left.svg"
+                alt="icon-arrow-left"
+                class="filter-white"
+              />
+            </button>
+          </div>
 
-        <form class="form-inline pl-3">
-          <div class="form-group ml-3">
-            <select class="form-control">
-              <option>جميع المهام</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="بحث" />
-          </div>
-        </form>
-      </div>
-      <div class="dragndrop">
-        <div class="d-flex flex-column text-right mb-5">
-          <h2>التصميم:</h2>
-          <div class="bg-white shadow-sm d-flex flex-column p-2 dragndrop">
-            <div class="checkbox checkbox-success checkbox-circle mb-4 pr-2">
-              <input type="checkbox" id="dTask1" checked />
-              <label for="dTask1">
-                تصميم الشكل العام وتجهيز المهام وتسليمه
-              </label>
+          <form class="form-inline pl-3">
+            <div class="form-group ml-3">
+              <select class="form-control">
+                <option>جميع المهام</option>
+              </select>
             </div>
-            <div class="form-check d-flex justify-content-between align-items-center mb-4">
-              <div class="checkbox checkbox-success checkbox-circle pr-2">
-                <input type="checkbox" id="dTask2" />
-                <label for="dTask2">
-                  تحويل التصميم إلى HTML + CSS
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="بحث" />
+            </div>
+          </form>
+        </div>
+        <div class="dragndrop">
+          <div class="d-flex flex-column text-right mb-5">
+            <h2>التصميم:</h2>
+            <div class="bg-white shadow-sm d-flex flex-column p-2 dragndrop">
+              <div class="checkbox mb-4 pr-2">
+                <input type="checkbox" id="dTask1" checked />
+                <label for="dTask1">
+                  تصميم الشكل العام وتجهيز المهام وتسليمه
                 </label>
               </div>
-              <div class="rounded-box">
-                CSS
+              <div
+                class="d-flex justify-content-between align-items-center mb-4 pr-2"
+              >
+                <div class="checkbox">
+                  <input type="checkbox" id="dTask2" />
+                  <label for="dTask2">
+                    تحويل التصميم إلى HTML + CSS
+                  </label>
+                </div>
+                <div class="rounded-box">
+                  CSS
+                </div>
               </div>
-            </div>
-            <div class="form-check d-flex justify-content-between align-items-center mb-4">
-              <div class="checkbox checkbox-success checkbox-circle pr-2">
-                <input type="checkbox" id="dTask3" />
-                <label for="dTask3">
-                  جعل التصميم متجاوب مع المتصفحات الصغيرة (Responsive)
-                </label>
+              <div
+                class="d-flex justify-content-between align-items-center mb-4 pr-2"
+              >
+                <div class="checkbox">
+                  <input type="checkbox" id="dTask3" />
+                  <label for="dTask3">
+                    جعل التصميم متجاوب مع المتصفحات الصغيرة (Responsive)
+                  </label>
+                </div>
+                <div class="rounded-box">
+                  CSS
+                </div>
               </div>
-              <div class="rounded-box">
-                CSS
+              <div
+                class="d-flex justify-content-between align-items-center mb-4 pr-2"
+              >
+                <div class="checkbox">
+                  <input type="checkbox" id="dTask4" />
+                  <label for="dTask4">
+                    جعل التصميم متوافق كحد أدنى مع IE9
+                  </label>
+                </div>
+                <div class="rounded-box">
+                  Browsers
+                </div>
               </div>
-            </div>
-            <div class="form-check d-flex justify-content-between align-items-center mb-4">
-              <div class="checkbox checkbox-success checkbox-circle pr-2">
-                <input type="checkbox" id="dTask4" />
-                <label for="dTask4">
-                  جعل التصميم متوافق كحد أدنى مع IE9
-                </label>
-              </div>
-              <div class="rounded-box">
-                Browsers
-              </div>
-            </div>
-            <div class="form-check d-flex justify-content-between align-items-center mb-4">
-              <div class="checkbox checkbox-success checkbox-circle pr-2">
-                <input type="checkbox" id="dTask5" />
-                <label for="dTask5">
-                  استخدام SASS لجعل ألوان التصميم سهلة التغيير
-                  (Skin-able/Theme-able)
-                </label>
-              </div>
-              <div class="rounded-box">
-                SASS
+              <div
+                class="d-flex justify-content-between align-items-center mb-4 pr-2"
+              >
+                <div class="checkbox">
+                  <input type="checkbox" id="dTask5" />
+                  <label for="dTask5">
+                    استخدام SASS لجعل ألوان التصميم سهلة التغيير
+                    (Skin-able/Theme-able)
+                  </label>
+                </div>
+                <div class="rounded-box">
+                  SASS
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="d-flex flex-column text-right mb-5">
-          <h2>تحسينات:</h2>
-          <div class="bg-white shadow-sm d-flex flex-column p-2 dragndrop">
-            <div class="checkbox checkbox-success checkbox-circle pr-2 mb-3">
-              <input type="checkbox" id="iTask1" />
-              <label for="iTask1">
-                إمكانية اخفاء القائمة الجانبية
-              </label>
-            </div>
-            <div class="checkbox checkbox-success checkbox-circle pr-2 mb-3">
-              <input type="checkbox" id="iTask2" />
-              <label for="iTask2">
-                إمكانية تعليم المهام كمنتهية
-              </label>
-            </div>
-            <div class="checkbox checkbox-success checkbox-circle pr-2 mb-3">
-              <input type="checkbox" id="iTask3" />
-              <label for="iTask3">
-                إمكانية إعادة ترتيب المهام والمجموعات
-              </label>
-            </div>
-            <div class="checkbox checkbox-success checkbox-circle pr-2 mb-1">
-              <input type="checkbox" id="iTask4" />
-              <label for="iTask4">
-                التوافقية مع أجهزة اللمس
-              </label>
+          <div class="d-flex flex-column text-right mb-5">
+            <h2>تحسينات:</h2>
+            <div class="bg-white shadow-sm d-flex flex-column p-2 dragndrop">
+              <div class="checkbox mb-3 pr-2">
+                <input type="checkbox" id="iTask1" />
+                <label for="iTask1">
+                  إمكانية اخفاء القائمة الجانبية
+                </label>
+              </div>
+              <div class="checkbox mb-3 pr-2">
+                <input type="checkbox" id="iTask2" />
+                <label for="iTask2">
+                  إمكانية تعليم المهام كمنتهية
+                </label>
+              </div>
+              <div class="checkbox mb-3 pr-2">
+                <input type="checkbox" id="iTask3" />
+                <label for="iTask3">
+                  إمكانية إعادة ترتيب المهام والمجموعات
+                </label>
+              </div>
+              <div class="checkbox mb-3 pr-2">
+                <input type="checkbox" id="iTask4" />
+                <label for="iTask4">
+                  التوافقية مع أجهزة اللمس
+                </label>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="d-flex flex-column text-right mb-5">
-          <h2>أخرى:</h2>
-          <div class="bg-white shadow-sm d-flex flex-column p-2 dragndrop">
-            <div class="checkbox checkbox-success checkbox-circle pr-2 mb-3">
-              <input type="checkbox" id="oTask1" />
-              <label for="oTask1">
-                تسليم المشروع النهائي في git repository مع ملاحظة استخدام
-                git-flow
-              </label>
-            </div>
-            <div class="checkbox checkbox-success checkbox-circle pr-2 mb-1">
-              <input type="checkbox" id="oTask2" />
-              <label for="oTask2">
-                إضافة لمساتك الخاصة في الأماكن التي تراها مناسبة مع ذكر سبب
-                إضافتها.
-              </label>
+          <div class="d-flex flex-column text-right mb-5">
+            <h2>أخرى:</h2>
+            <div class="bg-white shadow-sm d-flex flex-column p-2 dragndrop">
+              <div class="checkbox mb-3 pr-2">
+                <input type="checkbox" id="oTask1" />
+                <label for="oTask1">
+                  تسليم المشروع النهائي في git repository مع ملاحظة استخدام
+                  git-flow
+                </label>
+              </div>
+              <div class="checkbox mb-3 pr-2">
+                <input type="checkbox" id="oTask2" />
+                <label for="oTask2">
+                  إضافة لمساتك الخاصة في الأماكن التي تراها مناسبة مع ذكر سبب
+                  إضافتها.
+                </label>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-
-
-  <script src="./assets/js/jquery-3.5.1.slim.min.js"></script>
-  <script src="./assets/js/jquery.dragndrop.js"></script>
-  <script src="./assets/js/popper.min.js"></script>
-  <script src="./assets/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="./assets/js/app.js"></script>
-</body>
-
+    <script src="./assets/js/jquery-3.5.1.slim.min.js"></script>
+    <script src="./assets/js/jquery.dragndrop.js"></script>
+    <script src="./assets/js/popper.min.js"></script>
+    <script src="./assets/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./assets/js/app.js"></script>
+  </body>
 </html>

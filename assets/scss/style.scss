@@ -1,26 +1,54 @@
-$tam-primary: #4a90e2;
-$tam-secondary: #e0e0e0;
-$tam-default: #273648;
-$tam-light: #f9f9f9;
-$tam-dark: #535353;
+@import "../bootstrap/scss/bootstrap";
+
+$theme-colors: (
+  "primary": #4a90e2,
+  "secondary": #e0e0e0,
+  "default": #273648,
+  "light": #f9f9f9,
+  "dark": #535353,
+);
 
 @font-face {
   font-family: Dubai-Regular;
-  src: url("../fonts/DubaiW23-Regular.woff") format("woff");
-  src: url("../fonts/DubaiW23-Regular.ttf") format("ttf");
+  src: url("../fonts/DubaiW23-Regular.woff");
+  src: url("../fonts/DubaiW23-Regular.ttf");
 }
 @font-face {
   font-family: Dubai-Medium;
-  src: url("../fonts/DubaiW23-Medium.woff") format("woff");
-  src: url("../fonts/DubaiW23-Medium.ttf") format("ttf");
+  src: url("../fonts/DubaiW23-Medium.woff");
+  src: url("../fonts/DubaiW23-Medium.ttf");
 }
-* {
-  font-family: Dubai-Regular !important;
-  font-size: 18px !important;
+
+h2 {
+  font-family: Dubai-Medium, Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+.filter-white + span {
+  font-family: Dubai-Medium, Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  color: #fff;
+}
+
+label {
+  font-family: Dubai-Regular, Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+
+h4 {
+  font-family: Dubai-Medium, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: #fff;
+}
+h5 {
+  font-family: Dubai-Medium, Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  color: #edf4fc;
+  opacity: 0.5;
 }
 
 .filter-white {
-  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(102deg)
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(48deg)
     brightness(105%) contrast(101%);
 }
 .navbar-nav {
@@ -28,9 +56,9 @@ $tam-dark: #535353;
     > a {
       &:hover {
         color: white;
-        background-color: $tam-primary;
+        background-color: theme-color("primary");
         img {
-          filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(102deg)
+          filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(48deg)
             brightness(105%) contrast(101%);
         }
       }
@@ -39,9 +67,9 @@ $tam-dark: #535353;
   > .active {
     > a {
       color: white;
-      background-color: $tam-primary;
+      background-color: theme-color("primary");
       img {
-        filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(102deg)
+        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(48deg)
           brightness(105%) contrast(101%);
       }
     }
@@ -53,10 +81,10 @@ label {
   user-select: none;
 }
 .rounded-box {
-  color: $tam-dark;
-  background-color: $tam-secondary;
-  border-radius: 1rem;
-  padding: 0.5rem;
+  color: theme-color("dark");
+  background-color: theme-color("secondary");
+  border-radius: 1.25rem;
+  padding: 0.6rem;
   width: auto;
 }
 
@@ -69,7 +97,7 @@ label {
 #sidebar {
   min-width: 250px;
   max-width: 250px;
-  background: $tam-default;
+  background: theme-color("default");
   color: #fff;
   transition: all 0.3s;
 }
@@ -90,6 +118,41 @@ label {
     margin-right: -250px;
     .active {
       margin-right: 0;
+    }
+  }
+}
+
+.checkbox {
+  label {
+    display: inline;
+    vertical-align: middle;
+    position: relative;
+    margin-right: 1rem;
+    &::before {
+      content: url(../images/icon-uncheck.svg);
+      display: inline;
+      position: absolute;
+      right: 0;
+      margin-right: -2.5rem;
+    }
+    &::after {
+      display: inline;
+      position: absolute;
+      right: 0;
+      margin-right: -2.5rem;
+    }
+  }
+  input[type="checkbox"] {
+    opacity: 0;
+    z-index: 1;
+    &:checked {
+      + {
+        label {
+          &::after {
+            content: url(../images/icon-check.svg);
+          }
+        }
+      }
     }
   }
 }

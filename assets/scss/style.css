@@ -10949,7 +10949,7 @@ label {
 }
 
 hr {
-  background-color: #3D4A5A;
+  background-color: #3d4a5a;
 }
 
 #content {
@@ -10964,8 +10964,14 @@ hr {
   #sidebar {
     margin-right: -250px;
   }
-  #sidebar .active {
+  #sidebar.active {
     margin-right: 0;
+  }
+  .form-inline {
+    margin-top: 0.5rem;
+  }
+  .form-inline .form-group {
+    margin-right: 1rem;
   }
 }
 

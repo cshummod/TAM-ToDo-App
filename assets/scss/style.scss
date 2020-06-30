@@ -1,4 +1,4 @@
-@import "../bootstrap/scss/bootstrap";
+@import "../bootstrap/scss/variables";
 
 $theme-colors: (
   "primary": #4a90e2,
@@ -116,8 +116,8 @@ label {
   margin-right: -250px;
 }
 
-hr{
-background-color: #3D4A5A;
+hr {
+  background-color: #3d4a5a;
 }
 
 #content {
@@ -130,8 +130,15 @@ background-color: #3D4A5A;
 @media (max-width: 768px) {
   #sidebar {
     margin-right: -250px;
-    .active {
-      margin-right: 0;
+  }
+  #sidebar.active {
+    margin-right: 0;
+  }
+
+  .form-inline {
+    margin-top: 0.5rem;
+    .form-group {
+      margin-right: 1rem;
     }
   }
 }

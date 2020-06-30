@@ -10,7 +10,7 @@ $(document).ready(function () {
 
   $("#expandSidebarBtn").click(function () {
     $("#sidebar").toggleClass("active");
-    $(this).hide();
+    $("#expandSidebarBtn").hide();
   });
 
   $(window).on("resize", function () {
@@ -18,6 +18,7 @@ $(document).ready(function () {
       $("#expandSidebarBtn").show();
     }
   });
+
   // Drag and drop
   // Initiate Jquery dragndrop plugin
   $(".dragndrop").dragndrop();

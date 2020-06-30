@@ -107,13 +107,17 @@ label {
 #sidebar {
   min-width: 250px;
   max-width: 250px;
-  background: theme-color("default");
+  background-color: theme-color("default");
   color: #fff;
   transition: all 0.3s;
 }
 
 #sidebar.active {
   margin-right: -250px;
+}
+
+hr{
+background-color: #3D4A5A;
 }
 
 #content {

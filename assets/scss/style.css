@@ -10938,7 +10938,7 @@ label {
 #sidebar {
   min-width: 250px;
   max-width: 250px;
-  background: #273648;
+  background-color: #273648;
   color: #fff;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -10946,6 +10946,10 @@ label {
 
 #sidebar.active {
   margin-right: -250px;
+}
+
+hr {
+  background-color: #3D4A5A;
 }
 
 #content {

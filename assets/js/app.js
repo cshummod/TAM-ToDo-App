@@ -22,8 +22,8 @@ $(document).ready(function () {
   });
 
   // Drag and drop
-  // Initiate Jquery dragndrop plugin
-  $(".dragndrop").dragndrop();
+  // Initiate Jquery SortableJS plugins
+  $('.dragndrop').sortable();
 
   // Search box
   $("#search").keyup(function () {
@@ -54,4 +54,9 @@ $(document).ready(function () {
           color: "rgba(102, 102, 102, 1)",
         });
   });
+
+  // Extra: Append all tasks to task list
+  // $(".task label").each(function () {
+  //   $("#taskSelect").append(new Option($(this).text()));
+  // });
 });

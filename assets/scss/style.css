@@ -11064,29 +11064,26 @@ h5 {
   opacity: 0.5;
 }
 
-.filter-white {
-  -webkit-filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(48deg) brightness(105%) contrast(101%);
-          filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(48deg) brightness(105%) contrast(101%);
+.opacity-0 {
+  opacity: 0;
+}
+
+.navbar-nav li > a {
+  color: #fff;
 }
 
 .navbar-nav li > a:hover {
-  color: white;
+  color: #fff;
   background-color: #4a90e2;
 }
 
 .navbar-nav li > a:hover img {
-  -webkit-filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(48deg) brightness(105%) contrast(101%);
-          filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(48deg) brightness(105%) contrast(101%);
+  opacity: 1;
 }
 
 .navbar-nav > .active > a {
-  color: white;
+  color: #fff;
   background-color: #4a90e2;
-}
-
-.navbar-nav > .active > a img {
-  -webkit-filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(48deg) brightness(105%) contrast(101%);
-          filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(48deg) brightness(105%) contrast(101%);
 }
 
 .fixed-height {
@@ -11193,6 +11190,10 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+}
+
+select::-ms-expand {
+  display: none;
 }
 
 .btn-transparent:focus {

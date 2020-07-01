@@ -1,7 +1,7 @@
 # TAM ToDo App v1.0
 
 ## Overview
-In this project I built a ToDo App were first, I convert raster to responsive HTML + CSS
+In this project I built a ToDo App were first, I converted raster to responsive HTML + CSS
 that is compatiable with different browsers. I have used bootstrap/jQuery/SASS/jQuerySortable to
 come with robust and userfrindly app.
 

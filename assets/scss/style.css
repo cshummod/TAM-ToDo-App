@@ -166,6 +166,7 @@ hr {
 }
 
 .checkbox label::before {
+  content: url(../images/icon-uncheck.png);
   content: url(../images/icon-uncheck.svg);
   display: inline;
   position: absolute;
@@ -187,10 +188,12 @@ hr {
 }
 
 .checkbox input[type="checkbox"]:checked + label::after {
+  content: url(../images/icon-check.png);
   content: url(../images/icon-check.svg);
 }
 
 select {
+  background-image: url(../images/icon-arrow-down-small-dark.png);
   background-image: url(../images/icon-arrow-down-small-dark.svg);
   background-position: left 10px center;
   background-repeat: no-repeat;

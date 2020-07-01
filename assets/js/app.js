@@ -1,7 +1,9 @@
 $(document).ready(function () {
   // Sidebar
   // hide expand sidebar button on load
-  $("#expandSidebarBtn").hide();
+  if ($(window).width() > 768) {
+    $("#expandSidebarBtn").hide();
+  }
 
   $("#collapseSidebarBtn").on("click", function () {
     $("#sidebar").toggleClass("active");

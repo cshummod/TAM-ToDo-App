@@ -153,7 +153,12 @@ label {
   background-color: theme-color("secondary");
   border-radius: 1.25rem;
   padding: 0.6rem;
-  width: auto;
+  
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
 }
 
 .checkbox {

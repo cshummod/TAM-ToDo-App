@@ -25,6 +25,15 @@ $(document).ready(function () {
   // Initiate Jquery dragndrop plugin
   $(".dragndrop").dragndrop();
 
+  // Search box
+  $("#search").keyup(function () {
+    $(".task label").each(function () {
+      $(this).text().indexOf($("#search").val()) != -1
+        ? $(this).parent().show()
+        : $(this).parent().hide();
+    });
+  });
+
   // Tasks checkboxes
   if ($("#dTask1:checked")) {
     $("#dTask1").next().css({

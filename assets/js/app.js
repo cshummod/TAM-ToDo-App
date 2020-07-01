@@ -16,9 +16,9 @@ $(document).ready(function () {
   });
 
   $(window).on("resize", function () {
-    if ($(window).width() < 768) {
-      $("#expandSidebarBtn").show();
-    }
+    $(window).width() < 768
+      ? $("#expandSidebarBtn").show()
+      : $("#expandSidebarBtn").hide();
   });
 
   // Drag and drop

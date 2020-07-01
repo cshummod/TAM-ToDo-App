@@ -10,6 +10,24 @@ $theme-colors: (
   "dark": #535353,
 );
 
+$spacers: (
+  0: 0,
+  1: (
+    $spacer * 0.5,
+  ),
+  2: $spacer,
+  3: (
+    $spacer * 1.5,
+  ),
+  4: (
+    $spacer * 2,
+  ),
+  5: (
+    $spacer * 2.5,
+  ),
+);
+@import "../bootstrap/scss/bootstrap";
+
 @font-face {
   font-family: Dubai-Regular;
   src: url("../fonts/DubaiW23-Regular.woff");
@@ -21,24 +39,28 @@ $theme-colors: (
   src: url("../fonts/DubaiW23-Medium.ttf");
 }
 
+@mixin font($name, $size) {
+  font-family: $name, Arial, Helvetica, sans-serif;
+  font-size: $size;
+}
+
 h2 {
-  font-family: Dubai-Medium, Arial, Helvetica, sans-serif;
-  font-size: 20px;
+  @include font(Dubai-Medium, 20px);
 }
 
 .filter-white + span {
-  font-family: Dubai-Medium, Arial, Helvetica, sans-serif;
-  font-size: 18px;
+  @include font(Dubai-Medium, 18px);
+
   color: #fff;
 }
 
 label {
-  font-family: Dubai-Regular, Arial, Helvetica, sans-serif;
-  font-size: 18px;
+  @include font(Dubai-Regular, 18px);
 }
+
 input[type="text"] {
-  font-family: Dubai-Regular, Arial, Helvetica, sans-serif;
-  font-size: 18px;
+  @include font(Dubai-Regular, 18px);
+
   &::placeholder {
     color: #b5b5b5;
   }
@@ -48,13 +70,12 @@ input[type="text"] {
 }
 
 h4 {
-  font-family: Dubai-Medium, Arial, Helvetica, sans-serif;
-  font-size: 14px;
+  @include font(Dubai-Medium, 14px);
   color: #fff;
 }
+
 h5 {
-  font-family: Dubai-Medium, Arial, Helvetica, sans-serif;
-  font-size: 11px;
+  @include font(Dubai-Medium, 11px);
   color: #edf4fc;
   opacity: 0.5;
 }
@@ -63,6 +84,7 @@ h5 {
   filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(48deg)
     brightness(105%) contrast(101%);
 }
+
 .navbar-nav {
   li {
     > a {
@@ -88,16 +110,8 @@ h5 {
   }
 }
 
-label {
-  color: #666666;
-  user-select: none;
-}
-.rounded-box {
-  color: theme-color("dark");
-  background-color: theme-color("secondary");
-  border-radius: 1.25rem;
-  padding: 0.6rem;
-  width: auto;
+.fixed-height {
+  height: 58px !important;
 }
 
 #wrapper {
@@ -107,15 +121,15 @@ label {
 }
 
 #sidebar {
-  min-width: 250px;
-  max-width: 250px;
+  min-width: 200px;
+  max-width: 200px;
   background-color: theme-color("default");
   color: #fff;
   transition: all 0.3s;
 }
 
 #sidebar.active {
-  margin-right: -250px;
+  margin-right: -200px;
 }
 
 hr {
@@ -129,22 +143,17 @@ hr {
   transition: all 0.3s;
 }
 
-@media (max-width: 768px) {
-  #sidebar {
-    margin-right: -250px;
-  }
-  #sidebar.active {
-    margin-right: 0;
-  }
+label {
+  color: #666666;
+  user-select: none;
 }
 
-@media (max-width: 576px) {
-  .form-inline {
-    margin-top: 0.5rem;
-    .form-group {
-      margin-right: 1rem;
-    }
-  }
+.rounded-box {
+  color: theme-color("dark");
+  background-color: theme-color("secondary");
+  border-radius: 1.25rem;
+  padding: 0.6rem;
+  width: auto;
 }
 
 .checkbox {
@@ -187,13 +196,42 @@ hr {
 }
 
 select {
+  @include font(Dubai-Regular, 18px);
   background-image: url(../images/icon-arrow-down-small-dark.png);
   background-image: url(../images/icon-arrow-down-small-dark.svg);
   background-position: left 10px center;
   background-repeat: no-repeat;
-  font-family: Dubai-Regular, Arial, Helvetica, sans-serif;
-  font-size: 18px;
+  height: 41.6px !important;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+}
+
+.btn-transparent {
+  &:focus {
+    box-shadow: none !important;
+    outline: 0px !important;
+  }
+  &:active {
+    box-shadow: none !important;
+    outline: 0px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  #sidebar {
+    margin-right: -200px;
+  }
+  #sidebar.active {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .form-inline {
+    margin-right: 0.5rem;
+  }
+  #expandSidebarBtn {
+    margin-bottom: 0.5rem;
+  }
 }

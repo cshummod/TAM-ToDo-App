@@ -7,7 +7,6 @@
       rel="stylesheet"
       href="./assets/bootstrap/dist/css/bootstrap.min.css"
     />
-    <link rel="stylesheet" href="./assets/css/awesome-bootstrap-checkbox.css" />
     <link rel="stylesheet" href="./assets/scss/style.css" />
     <title>My ToDo App</title>
   </head>
@@ -16,40 +15,44 @@
     <div id="wrapper">
       <!-- Sidebar -->
       <nav id="sidebar" class="d-flex flex-column justify-content-between">
-        <div class="mt-2">
-          <div class="d-flex justify-content-between p-2 mb-4 h-25">
-            <a class="navbar-brand align-self-end" href="index.html">
-              <img
-                src="./assets/images/logo.png"
-                width="83"
-                height="32"
-                alt="logo"
-              />
-            </a>
-            <button
-              id="collapseSidebarBtn"
-              class="btn btn-transparent text-white pb-5"
-            >
-              <img
-                src="./assets/images/icon-close.svg"
-                width="9.3"
-                height="9.3"
-                class="filter-white"
-                alt="icon-close"
-                onerror="this.src='./assets/images/icon-close.png'"
-              />
-            </button>
+        <div>
+          <div class="d-flex justify-content-between mb-2 p-0 fixed-height">
+            <div class="align-self-end mr-1">
+              <a class="navbar-brand" href="index.html">
+                <img
+                  src="./assets/images/logo.png"
+                  width="83"
+                  height="32"
+                  alt="logo"
+                />
+              </a>
+            </div>
+            <div>
+              <button
+                id="collapseSidebarBtn"
+                class="btn btn-transparent text-white"
+              >
+                <img
+                  src="./assets/images/icon-close.svg"
+                  width="9"
+                  height="9"
+                  class="filter-white"
+                  onerror="this.src='./assets/images/icon-close.png'"
+                  alt="icon-close"
+                />
+              </button>
+            </div>
           </div>
           <ul class="navbar-nav px-0">
-            <li class="nav-item active text-right mb-2">
+            <li class="nav-item active mb-1">
               <a class="nav-link p-2" href="#">
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="d-flex">
+                <div class="d-flex justify-content-between">
+                  <div>
                     <img
                       src="./assets/images/icon-list.svg"
-                      alt="icon-list"
-                      class="filter-white ml-3"
+                      class="filter-white ml-2"
                       onerror="this.src='./assets/images/icon-list.png'"
+                      alt="icon-list"
                     />
                     <span>
                       المهام
@@ -57,103 +60,107 @@
                   </div>
                   <img
                     src="./assets/images/icon-arrow-left.svg"
-                    alt="icon-arrow-left"
                     onerror="this.src='./assets/images/icon-arrow-left.png'"
+                    alt="icon-arrow-left"
                   />
                 </div>
               </a>
             </li>
-            <li class="nav-item text-right mb-2">
+            <li class="nav-item mb-1">
               <a class="nav-link p-2" href="#">
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="d-flex w-75 align-items-center">
+                <div class="d-flex justify-content-between">
+                  <div>
                     <img
                       src="./assets/images/icon-user.svg"
-                      alt="icon-user"
-                      class="filter-white ml-3"
+                      class="filter-white ml-2"
                       onerror="this.src='./assets/images/icon-user.png'"
+                      alt="icon-user"
                     />
                     <span>الأعضاء</span>
                   </div>
                   <img
                     src="./assets/images/icon-arrow-left.svg"
-                    alt="icon-arrow-left"
                     onerror="this.src='./assets/images/icon-arrow-left.png'"
+                    alt="icon-arrow-left"
                   />
                 </div>
               </a>
             </li>
-            <li class="nav-item text-right mb-2">
+            <li class="nav-item mb-1">
               <a class="nav-link p-2" href="#">
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="d-flex w-75 align-items-center">
+                <div class="d-flex justify-content-between">
+                  <div>
                     <img
                       src="./assets/images/icon-creditcard.svg"
-                      alt="icon-creditcard"
-                      class="filter-white ml-3"
+                      class="filter-white ml-2"
                       onerror="this.src='./assets/images/icon-creditcard.png'"
+                      alt="icon-creditcard"
                     />
                     <span>الدفع والفواتير</span>
                   </div>
                   <img
                     src="./assets/images/icon-arrow-left.svg"
-                    alt="icon-arrow-left"
                     onerror="this.src='./assets/images/icon-arrow-left.png'"
+                    alt="icon-arrow-left"
                   />
                 </div>
               </a>
             </li>
-            <li class="nav-item text-right mb-2">
+            <li class="nav-item mb-1">
               <a class="nav-link p-2" href="#">
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="d-flex w-75 align-items-center">
+                <div class="d-flex justify-content-between">
+                  <div>
                     <img
                       src="./assets/images/icon-settings.svg"
-                      alt="icon-settings"
-                      class="filter-white ml-3"
+                      class="filter-white ml-2"
                       onerror="this.src='./assets/images/icon-settings.png'"
+                      alt="icon-settings"
                     />
                     <span>إعدادات</span>
                   </div>
                   <img
                     src="./assets/images/icon-arrow-left.svg"
-                    alt="icon-arrow-left"
                     onerror="this.src='./assets/images/icon-arrow-left.png'"
+                    alt="icon-arrow-left"
                   />
                 </div>
               </a>
             </li>
           </ul>
         </div>
-        <div class="mb-3">
+        <div class="mb-2">
           <hr />
           <div class="row align-items-center p-2">
-            <div class="col-md-10 d-flex">
+            <div class="col-10 d-flex">
               <img
                 src="./assets/images/avatar.png"
+                width="48"
+                class="img-fluid ml-1"
                 alt="avatar"
-                class="img-fluid ml-2"
               />
-              <div class="d-flex flex-column">
+              <div class="d-flex flex-column pt-2">
                 <h4>
                   محمد عبدالله
                 </h4>
                 <h5>الشركة المحدودة</h5>
               </div>
             </div>
-            <div class="col-md-2">
-              <img
-                src="./assets/images/icon-arrow-down-small.png"
-                alt="icon-arrow-down-small"
-              />
+            <div class="col-2 d-flex justify-content-center">
+              <a href="#">
+                <img
+                  src="./assets/images/icon-arrow-down-small.png"
+                  width="16"
+                  alt="icon-arrow-down-small"
+                />
+              </a>
             </div>
           </div>
         </div>
       </nav>
 
       <!-- Page Content -->
-      <div id="content">
-        <div class="row bg-white shadow-sm justify-content-between pb-3 mb-5">
+      <div id="content" class="pt-1">
+        <div class="row bg-white shadow-sm justify-content-between pb-3 mb-4">
           <div>
             <button
               type="button"
@@ -170,20 +177,27 @@
           </div>
 
           <form class="form-inline pl-3">
-            <div class="form-group ml-3">
+            <div class="form-group ml-1">
               <select class="form-control pl-5">
                 <option>جميع المهام</option>
               </select>
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="بحث" />
+              <input
+                type="text"
+                id="search"
+                class="form-control"
+                placeholder="بحث"
+              />
             </div>
           </form>
         </div>
         <div class="dragndrop">
-          <div class="d-flex flex-column text-right mb-5">
+          <div class="d-flex flex-column text-right mb-4">
             <h2>التصميم:</h2>
-            <div class="bg-white shadow-sm d-flex flex-column p-2 dragndrop">
+            <div
+              class="bg-white shadow-sm d-flex flex-column p-2 mt-1 dragndrop"
+            >
               <div class="checkbox mb-4 pr-2">
                 <input type="checkbox" id="dTask1" checked />
                 <label for="dTask1">
@@ -245,9 +259,11 @@
               </div>
             </div>
           </div>
-          <div class="d-flex flex-column text-right mb-5">
+          <div class="d-flex flex-column text-right mb-4">
             <h2>تحسينات:</h2>
-            <div class="bg-white shadow-sm d-flex flex-column p-2 dragndrop">
+            <div
+              class="bg-white shadow-sm d-flex flex-column mt-1 p-2 dragndrop"
+            >
               <div class="checkbox mb-3 pr-2">
                 <input type="checkbox" id="iTask1" />
                 <label for="iTask1">
@@ -276,7 +292,9 @@
           </div>
           <div class="d-flex flex-column text-right mb-5">
             <h2>أخرى:</h2>
-            <div class="bg-white shadow-sm d-flex flex-column p-2 dragndrop">
+            <div
+              class="bg-white shadow-sm d-flex flex-column mt-1 p-2 dragndrop"
+            >
               <div class="checkbox mb-3 pr-2">
                 <input type="checkbox" id="oTask1" />
                 <label for="oTask1">
